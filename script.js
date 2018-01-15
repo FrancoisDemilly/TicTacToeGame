@@ -22,11 +22,11 @@ computerButton.addEventListener("click", function(){
   computer = true;
 })
 
+
 var tiles = Array.prototype.slice.call(document.getElementsByClassName('tiles'));
 tiles.forEach(function(e){
   e.onclick = function(){
     tile = this.value;
-
     chosePlayer();
     }
 })
@@ -34,10 +34,8 @@ tiles.forEach(function(e){
 
 
 function chosePlayer(){
-  console.log('game', game, "tiles", tiles);
   if (game === "notStarted"){
     if (tile === "X"){
-      console.log("x has been clicked");
         player1 = '<i class="fa fa-times fa-4x" aria-hidden="true"></i>'; //"X"
         player2 = '<i class="fa fa-circle-o fa-4x" aria-hidden="true"></i>'; //"O"
 
@@ -46,7 +44,6 @@ function chosePlayer(){
         player2 = '<i class="fa fa-times fa-4x" aria-hidden="true"></i>'; //"X"
       }
       game = "started"
-
   }
 } // end of chosePlayer
 
@@ -57,10 +54,12 @@ function chosePlayer(){
 var squares = Array.prototype.slice.call(document.getElementsByClassName("square"));
 squares.forEach(function(item){
   item.onclick = function(){
-    id = this.id;
-    status = this.dataset.status;
+    //blocked tile when there is a winner
+    if(winGame === false){
+      id = this.id;
     //call the game
       playGame();
+    }
   }
 })
 
@@ -80,7 +79,6 @@ if(game === 'started'){
     if(turn%2 === 0) {
             document.getElementById(id).innerHTML = player1 ;
             addMove(id, movePlayer1);
-            console.log('from game player 1', movePlayer1);
             checkwin(movePlayer1);
             usedSquare.push(id);
             if (winGame === true){
@@ -89,16 +87,14 @@ if(game === 'started'){
                 }
             else {
               computerMove();
-
-              console.log('from game player 2', movePlayer2);
               checkwin(movePlayer2);
              if (winGame === true){
                 score2 ++;
                 document.getElementById('score2').innerHTML = score2
               }
             }
-    }//end of if(turn%2 === 0
-      turn++;
+    }//end of if(turn%2 === 0)
+      turn+2;
       playAgain();
       callingResetSetUp();
     }
@@ -136,7 +132,7 @@ function playGameFriends(){
 
 
 //collect players move
-function addMove(move, arrPlayer){
+function addMove( move, arrPlayer){
   arrPlayer.push(move)
 }
 

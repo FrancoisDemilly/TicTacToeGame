@@ -11,45 +11,55 @@
   </head>
 
   <body>
+  <div class="container">
     <h1>TicTacToeGame</h1>
 
-    <button id="computer">Play against computer</button>
-    <p>Choose your player</p>
-    <button class="tiles" id="tileX" value="X">X</button>
-    <button class="tiles" id="tileO" value="O">O</button>
 
-    <div class='Players'>
-    <p>Player 1</p>
-    <p>Score</p>
+    <button id="computer">Play against computer</button>
+    <div class="chose">
+      <p>Chose your player: </p>
+      <button class="tiles" id="tileX" value="X">X</button>
+      <button class="tiles" id="tileO" value="O">O</button>
+    </div><!-- end of .chose-->
+
+    <div class='players'>
+    <p>Player 1: </p>
     <p id='score1'></p>
     </div>
-    <div class='Players'>
-    <p>Player 2</p>
-    <p>Score</p>
+    <div class='players'>
+    <p>Player 2: </p>
     <p id='score2'></p>
     </div>
+
+
     <button id='reset'>Reset</button>
     <button id='playAgain'>Play Again</button>
 
+  <div class="squares-outer">
+    <div class="squares-inner">
+      <div class="squares-center">
+      <table>
+        <tr>
+          <td class="square" id="r1c1"></td>
+          <td class="square" id="r1c2"></td>
+          <td class="square" id="r1c3"></td>
+        </tr>
+        <tr>
+          <td class="square" id="r2c1"></td>
+          <td class="square" id="r2c2"></td>
+          <td class="square" id="r2c3"></td>
+        </tr>
+        <tr>
+          <td class="square" id="r3c1"></td>
+          <td class="square" id="r3c2"></td>
+          <td class="square" id="r3c3"></td>
+        </tr>
+      </table>
+      </div>
+    </div><!-- end of wrapper-->
+  </div><!-- end of squares
 
-    <table>
-      <tr>
-        <td class="square" id="r1c1"></td>
-        <td class="square" id="r1c2"></td>
-        <td class="square" id="r1c3"></td>
-      </tr>
-      <tr>
-        <td class="square" id="r2c1"></td>
-        <td class="square" id="r2c2"></td>
-        <td class="square" id="r2c3"></td>
-      </tr>
-      <tr>
-        <td class="square" id="r3c1"></td>
-        <td class="square" id="r3c2"></td>
-        <td class="square" id="r3c3"></td>
-      </tr>
-    </table>
-
+  </div><!--end of container-->
 
 
     <script src="script.js"></script>

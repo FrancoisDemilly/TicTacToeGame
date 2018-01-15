@@ -1,46 +1,89 @@
 /*css file*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:900');
+
 body{
 background-color: #473C43;
 }
 
-
 h1, p{
 color: #CC0082;
+font-family: Roboto;
+}
+
+h1{
+font-size: 40px;
+margin: 10px 0px 20px 5px;
+
 }
 
 p{
-font-size: 20px;
-}
-
-#r1c1, #r1c2, #r1c3,
-#r2c1, #r2c2, #r2c3,
-#r3c1, #r3c2, #r3c3 {
-  /*display: inline-block;*/
-  height: 90px;
-  width: 90px;
-  /*center horizontally*/
-  text-align: center;
-  /*center vertically*/
-  height: 90px;
-  line-height: 90px;
-  white-space: nowrap;
-
-
-  background-color: #CC0082;
-  color: #473C43;
-
-  /*border: 1px solid black;*/
-}
-
-button{
-border-radius: 5px;
-background-color: #842662;
-border: 2px solid #CC0082 ;
-padding: 4px 10px 4px 10px;
-color: #473C43;
 font-size: 15px;
 }
 
-.players{
-  display: inline;
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 600px;
+  margin-top: -300px;
+  margin-left: -150px;
+  background: #473C43;
+  border: 5px solid #CC0082;
+  /*box-shadow: 0px 0px 1px 5px rgba(204, 0, 130, 0.2);*/
 }
+
+.chose p {
+  margin: 5px 10px 5px 20px ;
+  display: inline-block;
+}
+
+.players p {
+  display: inline-block;
+  margin: 5px -5px 5px 20px ;
+}
+
+.squares-outer{
+  position: absolute;
+  display: table;
+  width: 300px;
+  height: 260px
+
+}
+.squares-inner{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.squares-center{
+  display: inline-block;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+
+td{
+  height: 90px;
+  width: 90px;
+  background-color: #CC0082;
+  color: #473C43;
+}
+
+button{
+margin: 15px 0px 10px 10px;
+background-color: #CC0082 ;
+border: none;
+padding: 4px 10px 4px 10px;
+color: #473C43;
+font-size: 15px;
+font-family: Roboto;
+}
+
+button:focus {
+      outline: 1px solid #FFA500;
+    }
+
+ button::-moz-focus-inner {
+      border: 0;
+      padding: 0;
+    }
