@@ -11,9 +11,9 @@ font-family: Roboto;
 }
 
 h1{
-font-size: 40px;
-margin: 10px 0px 20px 5px;
-
+font-size: 30px;
+display: inline-block;
+margin: 0;
 }
 
 p{
@@ -25,11 +25,14 @@ font-size: 15px;
   top: 50%;
   left: 50%;
   width: 300px;
-  height: 600px;
-  margin-top: -300px;
+  height: 460px;
+  margin-top: -230px;
   margin-left: -150px;
   background: #473C43;
   border: 5px solid #CC0082;
+  border-radius: 1px;
+  text-align: center;
+  box-sizing: border-box;
   /*box-shadow: 0px 0px 1px 5px rgba(204, 0, 130, 0.2);*/
 }
 
@@ -63,20 +66,22 @@ font-size: 15px;
 
 
 td{
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
   background-color: #CC0082;
   color: #473C43;
 }
 
 button{
-margin: 15px 0px 10px 10px;
+margin: 5px 0px 0px 0px;
 background-color: #CC0082 ;
 border: none;
 padding: 4px 10px 4px 10px;
 color: #473C43;
 font-size: 15px;
 font-family: Roboto;
+cursor: pointer;
+border-radius: 1px;
 }
 
 button:focus {
